@@ -11,15 +11,11 @@ public class Inventory {
     private int numInStock;
     private LocalDate expDate;
     
-    public Inventory () {
-        
-    }
-    
-    public Inventory(String id, String na, double c, int nu, LocalDate e) {
+    public Inventory(String id, String n, double c, int num, LocalDate e) {
         itemId = id;
-        name = na;
+        name = n;
         cost = c;
-        numInStock = nu;
+        numInStock = num;
         expDate = e;
     }
 
@@ -27,25 +23,7 @@ public class Inventory {
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         return name + ": " + nf.format(cost) + " (" + numInStock + " in stock, expiration date: " + expDate + ")";
     }
-    
-    /*TO DO LATER ON
-    public void compareTo(AnOrder item, String itemID) { 
-         
-        if(item.getItemObject().equals(itemID)){
-            return item.;
-        }
-        else if(item.getItemObject().equals(itemID)){
-            return;
-        }
-        else
-            return;
-    }
-    
-    public double InvTotalPrice(double cost, double num) {
-        double total = cost * num;
-        return total;
-    }*/
-    
+
     public String getItemId() {
         return itemId;
     }
@@ -86,6 +64,21 @@ public class Inventory {
         this.expDate = expDate;
     }
 
-    
-    
 }
+
+    public void compareTo(AnOrder item, String itemID) {
+
+        if(item.getItemObject().equals(itemID)){
+            return item.;
+        }
+        else if(item.getItemObject().equals(itemID)){
+            return;
+        }
+        else
+            return;
+    }
+
+    public double InvTotalPrice(double cost, double num) {
+        double total = cost * num;
+        return total;
+    }
