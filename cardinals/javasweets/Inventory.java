@@ -65,7 +65,7 @@ public class Inventory {
     }
 
 }
-
+/*
     public void compareTo(AnOrder item, String itemID) {
 
         if(item.getItemObject().equals(itemID)){
@@ -81,4 +81,4 @@ public class Inventory {
     public double InvTotalPrice(double cost, double num) {
         double total = cost * num;
         return total;
-    }
+    }*/
